@@ -20,9 +20,9 @@
 **
 */
 
-#include "cfe_tbl_filedef.h" /* Required to obtain the CFE_TBL_FILEDEF macro definition */
 #include "sch_lab_table.h"
-#include "cfe_sb.h" /* Required to use the CFE_SB_MSGID_WRAP_VALUE macro */
+#include "cfe_sb.h"          /* Required to use the CFE_SB_MSGID_WRAP_VALUE macro */
+#include "cfe_tbl_filedef.h" /* Required to obtain the CFE_TBL_FILEDEF macro definition */
 
 /*
 ** Include headers for message IDs here
@@ -33,11 +33,11 @@
 #include "fpga_ctrl_msgids.h"
 
 #if 0
-#include "sc_msgids.h"
-#include "hs_msgids.h"
-#include "fm_msgids.h"
 #include "ds_msgids.h"
+#include "fm_msgids.h"
+#include "hs_msgids.h"
 #include "lc_msgids.h"
+#include "sc_msgids.h"
 #endif
 
 /*
@@ -57,7 +57,7 @@ SCH_LAB_ScheduleTable_t SCH_TBL_Structure = {.Config = {
                                                  {CFE_SB_MSGID_WRAP_VALUE(CFE_TBL_SEND_HK_MID), 4, 0},
                                                  {CFE_SB_MSGID_WRAP_VALUE(CI_LAB_SEND_HK_MID), 4, 0},
                                                  {CFE_SB_MSGID_WRAP_VALUE(TO_LAB_SEND_HK_MID), 4, 0},
-                                                 {CFE_SB_MSGID_WRAP_VALUE(FPGA_CTRL_SEND_HK_MID), 4, 0},
+                                                 {CFE_SB_MSGID_WRAP_VALUE(FPGA_CTRL_SEND_HK_MID), 1, 0},
 #if 0
                 {CFE_SB_MSGID_WRAP_VALUE(SC_SEND_HK_MID),       4, 0},
                 {CFE_SB_MSGID_WRAP_VALUE(SC_1HZ_WAKEUP_MID),    1, 0},  /* Example of a 1hz packet */
